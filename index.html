@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fontawesome.com/icons/circle-xmark?s=solid&f=sharp">
+</head>
+<body>
+  
+  <div id="header">
+  
+      
+    <div class="container">
+      <nav>
+        <img src="images/Sabin.png" class="logo">
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          
+          <li><a href="#Hobbies">Hobbies</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+          <li><a href="#portfolio">References</a></li>
+          <i class="fa-regular fa-list-dropdown"></i>
+        </ul>
+        <i class="fa-regular fa-list-dropdown"></i>
+      </nav>
+   
+    </div>
+  </div>
+  <!--topsection-->
+  <div class="top-section">
+    <div class="left">
+      <p>Full-Time Student</p>
+      <h1>Hi, I am <span>Sabin Bhujel</span></h1>
+    </div>
+    <div class="right">
+      <img src="images/profile.JPG">
+    </div>
+  </div>
+  
+  <!-------------about -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/my.png">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p> Motivated Student with a strong work ethic and
+             creative ability at Herald College Kathmandu studying for
+              Bachelor's (hons) in Computer Science. 
+
+
+          </p>
+
+          <div class="tab-titles">
+            <p class="tab-links  active-link" onclick="opentab('education')">Education</p>
+           
+            <p class="tab-links" onclick="opentab('skills')">Skills</p>
+
+          </div>
+          <div class="tab-contents active-tabs" id="education">
+            <ul>
+              <li><span>Secondary School</span><br>Baby Land English Secondary School</li>
+
+              <li><span>High School</span><br>Kathmandu Model College<br></li>
+
+              <li><span>Bachelor's</span><br>Currently persuing bachelor's at
+                Herlad College Kathmandu<br></li>
+
+            </ul>
+          </div>
+          <div class="tab-contents" id="skills">
+            <ul>
+              <li><span>Java</span><br>I am amature at Java Programming language</li>
+              <li><span>Python</span><br>I am good at Python.<br></li>
+
+              <li><span>Html</span><br>good</li>
+              <li><span>CSS</span><br>good</li>
+              <li><span>JavaScript</span><br>good</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!----------Hobbies------>
+  <div id="Hobbies">
+    <div class="container">
+      <h1 class="sub-title"> My Hobbies</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/a.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---ref---->
+  <div id="reference">
+    <h2>References</h2>
+    <ul>
+      <li><a href="https://fontawesome.com/">Fonts</a></li>
+      <li><a href="https://www.youtube.com/watch?v=0YFrGy_mzjY">Reference Video</a></li>
+      <li><a href=https://github.com/jamiewilson/form-to-google-sheets>Sheet Code Ref</a></li>
+      
+    </ul>
+  </div>
+  
+<!------------------contact-->
+<div id="contact">
+  <div class="container">
+     <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p> <i class="fa-solid fa-paper-plane"></i>sabinbhujel02@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>+977 9869286991</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/SabinDai.02"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/sabin-bhujel-57626425a/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/thugger_ii/?next=%2F"><i class="fa-brands fa-square-instagram"></i></a>
+          
+        </div>
+        <a href="CV.pdf" download class="btn btn2">Download CV</a>
+      </div>
+      
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required >
+          <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+     </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright © Sabin <i class="fa-solid fa-ghost"></i>.</p>
+  </div>
+  
+</div>
+
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link")
+      document.getElementById(tabname).classList.add("active-tab")
+    }
+
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyLvAweoOQ9h9rJtj5hczCotAoEeD01StTBgVN5j97TiPbJTJx3UcVPzAlwCc_xNkMx/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Message Sent Sucessfully"
+          setTimeout(function(){
+          msg.innerHTML=""
+      },5000)
+      form.reset()
+    })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
