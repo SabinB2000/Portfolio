@@ -48,57 +48,69 @@
   <!-------------about -->
   <div id="about">
     <div class="container">
-      <div class="row">
-        <div class="about-col-1">
-          <img src="images/my.png">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/my.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Motivated Student with a strong work ethic and
+                    creative ability at Herald College Kathmandu studying for
+                    Bachelor's (hons) in Computer Science.</p>
+                <div class="tab-titles">
+                    <div class="tab-links active-link" onclick="opentab('education')">Education</div>
+                    <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                    <div class="tab-links" onclick="opentab('skills')">Skills</div>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                    <li><span>Secondary School</span><br>Baby Land English Secondary School</li>
+                    <li><span>High School</span><br>Kathmandu Model College<br></li>
+                    <li><span>Bachelor's</span><br>Currently persuing Bachelor's in Computer Science at Herlad College Kathmandu<br></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Student</span><br>At present, I am a student at Herald college kathmandu</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="skills">
+                    <ul>
+                        <li><span>java</span><br>I am amature at Java Programming language</li>
+                        <li><span>Python</span><br>I am good at Python.<br></li>
+                        <li><span>Html</span><br>I am good at HTML</li>
+                        <li><span>CSS</span><br>I have good Understanding about CSS</li>
+                        <li><span>JavaScript</span><br>Learning......</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="about-col-2">
-          <h1 class="sub-title">About Me</h1>
-          <p> Motivated Student with a strong work ethic and
-            creative ability at Herald College Kathmandu studying for
-            Bachelor's (hons) in Computer Science.
-
-
-          </p>
-
-          <div class="tab-titles">
-            <p class="tab-links  active-link" onclick="opentab('education')">Education</p>
-
-            <p class="tab-links" onclick="opentab('skills')">Skills</p>
-
-          </div>
-          <div class="tab-contents active-tabs" id="education">
-            <ul>
-              <li><span>Secondary School</span><br>Baby Land English Secondary School</li>
-
-              <li><span>High School</span><br>Kathmandu Model College<br></li>
-
-              <li><span>Bachelor's</span><br>Currently persuing Bachelor's in Computer Science at
-                Herlad College Kathmandu<br></li>
-
-            </ul>
-          </div>
-          <div class="tab-contents" id="skills">
-            <ul>
-              <li><span>Java</span><br>I am amature at Java Programming language</li>
-              <li><span>Python</span><br>I am good at Python.<br></li>
-
-              <li><span>Html</span><br>I am good at HTML</li>
-              <li><span>CSS</span><br>I have good Understanding about CSS</li>
-              <li><span>JavaScript</span><br>Learning......</li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
   <!----------Hobbies------>
 
-  <div id="Hobbies">
-    <div class="container">
       <h1 class="sub-title"> My Hobbies</h1>
-      <ul>
+      <div class="flexcontainer">
+        
+        <div class="box">
+          <img src="images/game.jpg">
+          <p>I prefer playing games.</p>
+        </div>
+        <div class="box">
+          <img src="images/music.jpg">
+          <p>I love listening to Music.</p>
+        </div>
+        <div class="box">
+          <img src="images/hangout.jpg">
+          <p>I also love hanging out with my close ones.</p>
+        </div>
+        <div class="box">
+          <img src="images/books.jpg">
+          <p>Reading self-help books</p>
+        </div>
+      </div>
+  
+      <!-- <ul>
         <li> 
             I like to Read Self-Help Books.
          </li>
@@ -116,7 +128,7 @@
         <div class="work">
           
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <!---ref---->
@@ -168,18 +180,19 @@
   <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
+
     function opentab(tabname){
-      for(tablink of tablinks){
-        tablink.classList.remove("active-link");
-      }
-      for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tabs");
-      }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
     }
-  </script>
-  <!-- <script src="index.js"></script> -->
+</script>
+  <script src="index.js"></script>
 </body>
 
 </html>
